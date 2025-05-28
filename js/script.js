@@ -125,3 +125,60 @@ document.querySelectorAll('.event-card').forEach(card => {
         card.style.setProperty('--mouse-y', '0deg');
     });
 });
+
+// Script para animar os contadores e observar elementos
+document.addEventListener('DOMContentLoaded', function() {
+  // Função para animar contadores
+  function animateCounter(element, finalValue, duration = 2000) {
+    const startTime = performance.now();
+    const startValue = 0;
+    
+    function updateCounter(currentTime) {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      const currentValue = Math.floor(progress * (finalValue - startValue) + startValue);
+      
+      element.textContent = currentValue;
+      
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      }
+    }
+    
+    requestAnimationFrame(updateCounter);
+  }
+  
+  // Observador para animar elementos quando entram na viewport
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animar contadores
+        animateCounter(document.getElementById('projectsCount'), 240);
+        animateCounter(document.getElementById('clientsCount'), 150);
+        animateCounter(document.getElementById('teamCount'), 54);
+        
+        // Adicionar classe para mostrar cards de valores
+        const valueCards = document.querySelectorAll('.value-card');
+        valueCards.forEach(card => card.classList.add('in-view'));
+        
+        // Parar de observar depois de ativar
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  // Observar a seção sobre a empresa
+  const aboutSection = document.getElementById('about-company');
+  if (aboutSection) {
+    observer.observe(aboutSection);
+  }
+  
+  // Animação para o marcador de timeline
+  const timelineMarker = document.querySelector('.timeline-marker');
+  if (timelineMarker) {
+    setTimeout(() => {
+      timelineMarker.style.width = '100%';
+      timelineMarker.style.transition = 'width 1.5s ease-out';
+    }, 500);
+  }
+});
