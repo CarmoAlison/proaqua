@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital Premium</title>
+    <link rel="stylesheet" href="./css/ebook.css">
+    <link rel="icon" href="images/logo Proagua.png" type="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+
+<body>
+    <!-- Página de Login -->
+    <div id="loginPage">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+        <div class="login-header">
+            <img src="images/logo proagua Branca.png" alt="">
+            <h1>Acesse já seu ebook</h1>
+            <p>Acesse sua conta para desbloquear conteúdo exclusivo e baixar nossos ebooks de alta qualidade</p>
+        </div>
+
+        <div class="login-card">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" placeholder="Digite seu usuário" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login">Acessar Biblioteca</button>
+                <div class="error-message" id="errorMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Página do Ebook -->
+    <div id="ebookPage">
+        <div class="header">
+            <div class="logo">Ebook Premium</div>
+            <button class="btn-logout" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+        </div>
+
+        <div class="ebook-container">
+            <div class="ebook-cover">
+                <img src="images/logo proagua Branca.png" alt="">
+                <h2>MANUAL DO ALUNO</h2>
+                <p>Seja bem vindo e aproveite nosso ebook da melhor forma!</p>
+                <p>Este ebook contém todas as informações necessárias para você, cliente, navegar pela nossa plataforma e
+                    aproveitar ao máximo nossos recursos.</p>
+                <div class="author">- Equipe Proaqua</div>
+                <button class="btn-download" id="downloadBtn">
+                    <i class="fas fa-download"></i> Baixar Ebook
+                </button>
+            </div>
+
+            <!-- <div class="ebook-preview">
+                <div class="preview-header">
+                    <div>Pré-visualização</div>
+                    <div class="page-controls">
+                        <div class="page-btn" id="prevPage">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="page-btn" id="nextPage">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-content">
+                    <div class="page" id="page1">
+                        <h3>Introdução</h3>
+                        <p>Seja bem-vindo ao nosso sistema educacional! Este manual foi criado para ajudá-lo a navegar e
+                            aproveitar ao máximo todos os recursos disponíveis em nossa plataforma.</p>
+                        <p>Aqui você encontrará instruções detalhadas, dicas úteis e informações importantes que irão
+                            facilitar sua jornada de aprendizado.</p>
+                    </div>
+                    <div class="page" id="page2" style="display:none;">
+                        <h3>Capítulo 1: Acesso à Plataforma</h3>
+                        <p>Para acessar sua conta, utilize seu email cadastrado e a senha fornecida pela instituição.
+                            Caso tenha esquecido sua senha, utilize o recurso "Recuperar Senha".</p>
+                        <p>Recomendamos que após o primeiro acesso você altere sua senha para uma combinação segura e
+                            pessoal.</p>
+                    </div>
+                    <div class="page" id="page3" style="display:none;">
+                        <h3>Capítulo 2: Navegação e Recursos</h3>
+                        <p>Nossa plataforma oferece diversas ferramentas para otimizar seu aprendizado:</p>
+                        <ul style="text-align: left; margin-top: 15px;">
+                            <li>Biblioteca virtual com materiais complementares</li>
+                            <li>Fórum de discussão com colegas e professores</li>
+                            <li>Calendário acadêmico com datas importantes</li>
+                            <li>Sistema de avaliação online</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script src="./js/ebook.js"></script>
+
+</html>
