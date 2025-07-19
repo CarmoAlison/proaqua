@@ -493,6 +493,39 @@
             .ebook-preview {
                 height: 400px;
             }
+            .header{
+                display: block;
+                gap: 20px;
+            }
+
+            .logo{
+                margin: 10px;
+            }
+            .btn-logout{
+                margin: 10px;
+            }
+
+            .ebook-cover{
+                height: auto;
+                padding: 10px;
+            }
+            .ebook-container{
+                padding: 0;
+                width: 100%;
+            }
+            #ebookPage{
+                padding: 0;
+            }
+            body{
+                padding: 0;
+            }
+            #pagina2{
+                font-size: 12px;
+            }
+
+            .btn-download{
+                font-size: 20px;
+            }
         }
 
         .user-greeting {
