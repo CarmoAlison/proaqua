@@ -1,7 +1,7 @@
 // Dados de usuários válidos (com nome de exibição)
 const validUsers = {
     "admin": {
-        password: "senha123",
+        password: "proaqua123",
         displayName: "Administrador"
     },
     "usuario": {
